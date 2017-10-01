@@ -3,6 +3,14 @@
 
 class Bottles
 
+  def verses(initial_count, final_count)
+    initial_count.downto(final_count).to_a.map { |i| verse(i) }.join("\n")
+  end
+
+  def verse(which)
+    return _verse(which)
+  end
+
     def _verse(index)
       if index > 0
         return _basic_verse(index)
@@ -46,7 +54,5 @@ VERSE
       end
     end
 
-    def verse(which)
-      return _verse(which)
-    end
+ 
 end
